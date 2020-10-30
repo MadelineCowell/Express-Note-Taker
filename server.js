@@ -5,6 +5,7 @@ const app = express();
 const fs = require("fs");
 const path = require("path")
 const PORT = process.env.PORT || 3000;
+
 //ROUTES REQUIRED
 const apiRoute = require("./routes/apiroutes");
 const htmlRoute = require("./routes/htmlroutes");

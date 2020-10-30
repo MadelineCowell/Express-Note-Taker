@@ -9,27 +9,34 @@ const writeFileAsync = util.promisify(fs.watchFile)
 class Action {
     //read all notes in db.json
     read() {
-        return readFileAsync("db/db.json")
+        return readFileAsync("db/db.json", "utf8");
     }
-    // write notes
+    // creates notes
     write(note) {
-        return writeFileAsync("db/db.json", note);
+        return writeFileAsync("db/db.json", JSON.stringify(note));
     }
+    
     getNotes() {
-        const notesCreated = 
-        return this.read().then((response) => {
-
+        return this.read().then(notes => {
+            let parsedNotes = JSON(notes);
+            console.log(parsedNotes);
+            return parsedNotes;
         });
     }
-    addNote (note) {
-        const{ title, text } = note;
-        const newNote = { title, text, id }
-        return this.getNotes
+
+    addNote(newNote) {
+        // console.log(newNote);
+        return this.getNotes().then(notes => {
+            const newNotesArr = [...notes, newNote]; 
+            console.log(newNotesArr);
+            return this.write(newNotesArr);
+        });
     }
+
     deleteNote(id) {
         return this.getNotes()
-        .then(remove) => remove.filter((this.deletedNote) => this.deletedNote.id !== id))
-        .then((filterNotes) => this.write(filterNotes))        
+            .then(remove) => remove.filter((this.deletedNote) => this.deletedNote.id !== id))
+        .then((filterNotes) => this.write(filterNotes))
     }
 
 };
