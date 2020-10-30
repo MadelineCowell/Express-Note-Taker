@@ -1,10 +1,14 @@
 const path = require("path");
 const router = require("express").Router();
 
-// use to join to HTML
+//JOIN NOTES PATH
+router.get("/notes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/notes.html"));
+});
 
-// Join path notes to notes.html
-
-// Join path from catchall to index.html
+//JOIN CATCHALL PATH AND INDEX
+router.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+});
 
 module.exports = router;
