@@ -1,7 +1,6 @@
 # Express Note Taker
-[GITHUB REPOSITORY] (https://github.com/MadelineCowell/Express-Note-Taker)
-[DEPLOYED ON HEROKU] (
-https://git.heroku.com/shielded-ocean-87626.git)
+[GITHUB REPOSITORY](https://github.com/MadelineCowell/Express-Note-Taker)
+[DEPLOYED ON HEROKU](https://git.heroku.com/shielded-ocean-87626.git)
 
 
 ## DEVELOPMENT
