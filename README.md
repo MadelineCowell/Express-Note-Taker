@@ -17,8 +17,16 @@ As a user, I want to organize my thoughts and keep track of tasks I need to comp
 
 For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
 
+## INSTALLATION
+
+Install dependencies: "npm i"
+
 ## FUTURE DEVELOPMENT
 
 *Add a category to their notes
 *Organize their notes via selectors (date created, title, category, etc)
 *Create multiple notepads to separate note types
+
+## LICENSE
+
+This project is licensed under MIT.
